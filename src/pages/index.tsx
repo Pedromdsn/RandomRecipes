@@ -1,6 +1,5 @@
 import axios from "axios"
 import { GetStaticProps } from "next"
-import Head from "next/head"
 import LeftBody from "../components/Body"
 import MainHeader from "../components/Header"
 import RightBody from "../components/Mobile"

@@ -10,12 +10,14 @@ export default function LeftBody({ food }) {
 					<div className="font-Standard font-light mt-5">⭐ ⭐ ⭐ ⭐ ⭐ stars</div>
 				</div>
 				<div className="items-center absolute -right-20 md:hidden">
-					<Image src={food.strMealThumb} width={300} height={300} className="rounded-full"/>
+					<Image src={food.strMealThumb} width={300} height={300} className="rounded-full" />
 				</div>
 			</div>
 			<div className="mt-32 md:mt-10 2xl:mt-20">
 				<div className="font-Standard font-bold text-2xl">Method</div>
-				<div className="h-96 overflow-y-auto mt-10 px-5 flex flex-col gap-10 md:h-52">
+				<div
+					style={{ scrollbarColor: "#F59E0B #444" }}
+					className="h-96 overflow-y-auto mt-10 px-5 flex flex-col gap-10 2xl:h-52 ">
 					{food.strInstructions.split(". ").map((text, index) => {
 						return <Paragraphs text={text} id={index} />
 					})}

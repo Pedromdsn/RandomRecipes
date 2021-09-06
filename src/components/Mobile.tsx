@@ -7,7 +7,7 @@ import { IconType } from "react-icons/lib"
 
 export default function RightBody({ food }) {
 	return (
-		<div style={{ height: "95vh" }} className="bg-white rounded-3xl w-2/3 mx-auto p-14 py-20">
+		<div style={{ height: "85vh" }} className="bg-white rounded-3xl w-2/3 mx-auto p-14 py-20">
 			<div className="mb-10 flex gap-5 flex-col">
 				<TopMobile text="20 minutes" icon={BiTimeFive} />
 				<TopMobile text="630 Calories" icon={BsLightning} />
@@ -15,12 +15,15 @@ export default function RightBody({ food }) {
 			</div>
 			<div>
 				<div className="font-Kaisei font-bold text-4xl">Ingredientes</div>
-				<div style={{height: "55vh"}} className="p-3 flex flex-col gap-3 mt-5 overflow-y-auto">
+				<div
+					style={{ scrollbarColor: "#F59E0B #444" }}
+					className="p-3 flex flex-col gap-3 mt-5 overflow-y-auto 2xl:h-64">
 					{Object.values(filterFromIngredientes(food) as string[])
 						.filter((e) => e != "")
-						.map((e, i) => (
-							<Ingredientes text={e} />
-						))}
+						.map((e, i) => {
+							if (i >= 13) return
+							return <Ingredientes text={e} />
+						})}
 				</div>
 			</div>
 		</div>
