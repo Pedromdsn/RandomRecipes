@@ -19,7 +19,7 @@ export default function LeftBody({ food }) {
 					style={{ scrollbarColor: "#F59E0B #444" }}
 					className="h-96 overflow-y-auto mt-10 px-5 flex flex-col gap-10 2xl:h-52 ">
 					{food.strInstructions.split(". ").map((text, index) => {
-						return <Paragraphs text={text} id={index} />
+						return <Paragraphs text={text} id={index} key={index} />
 					})}
 				</div>
 			</div>

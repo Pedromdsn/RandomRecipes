@@ -22,7 +22,7 @@ export default function RightBody({ food }) {
 						.filter((e) => e != "")
 						.map((e, i) => {
 							if (i >= 13) return
-							return <Ingredientes text={e} />
+							return <Ingredientes text={e} key={i} />
 						})}
 				</div>
 			</div>
