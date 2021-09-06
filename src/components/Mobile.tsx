@@ -15,7 +15,7 @@ export default function RightBody({ food }) {
 			</div>
 			<div>
 				<div className="font-Kaisei font-bold text-4xl">Ingredientes</div>
-				<div style={{height: "60vh"}} className="p-3 flex flex-col gap-3 mt-5 overflow-y-auto">
+				<div style={{height: "55vh"}} className="p-3 flex flex-col gap-3 mt-5 overflow-y-auto">
 					{Object.values(filterFromIngredientes(food) as string[])
 						.filter((e) => e != "")
 						.map((e, i) => (
